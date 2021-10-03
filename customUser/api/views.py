@@ -5,6 +5,6 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 
 @api_view(['GET']) # 어떤 request 함수가 사용될 지 결정
-@permission_classes([AllowAny]) # 모든 사람에게 허용하는 함수
+# @permission_classes([AllowAny]) # 모든 사람에게 허용하는 함수로 설정
 def hello_world(request):
     return Response({"message": "Hello, world!"})

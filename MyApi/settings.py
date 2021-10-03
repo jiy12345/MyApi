@@ -65,12 +65,14 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     # rest framework에서 제공하는 기본적인 사용자에 대한 허용사항
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        # 인증받은 사용자가 이용할 수 있도록 수정
+        'rest_framework.permissions.IsAuthenticated',
     ],
 
     # Authentication을 위한 클래스들
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.BasicAuthentication',
+        # 'rest_framework.authentication.BasicAuthentication',
         # csrf에 대한 오류 발생하여 session => token
         'rest_framework.authentication.TokenAuthentication',
     ]
