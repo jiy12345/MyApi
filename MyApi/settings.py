@@ -65,7 +65,8 @@ REST_FRAMEWORK = {
     # Authentication을 위한 클래스들
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+        # csrf에 대한 오류 발생하여 session => token
+        'rest_framework.authentication.TokenAuthentication',
     ]
 }
 
