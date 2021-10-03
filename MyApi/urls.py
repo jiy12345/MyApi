@@ -21,4 +21,5 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')), # rest_framework 사용을 위한 url
     path('rest-auth/', include('rest_auth.urls')), # user-auth 기능을 위해 추가: login, logout 비밀번호 변경
     path('rest-auth/registration/', include('rest_auth.registration.urls')),
+    path('customUser/', include('customUser.api.urls')), # 프로젝트에서 앱으로 url 연결
 ]

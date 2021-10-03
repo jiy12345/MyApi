@@ -50,6 +50,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+
+    # 커스텀 유저모델 구현한 앱 추가
+    'customUser',
 ]
 
 # 이메일 인증 안되도록 설정
