@@ -63,11 +63,11 @@ SITE_ID = 1
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
-    # rest framework에서 제공하는 기본적인 사용자에 대한 허용사항
+    # 이 프로젝트에서 사용할 기본적인 허용사항 결정하기!
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-        # 인증받은 사용자가 이용할 수 있도록 수정
-        'rest_framework.permissions.IsAuthenticated',
+        # 별다른 언급 없을 시 인증받은 사용자가 이용할 수 있도록 수정
+        'rest_framework.permissions.IsAuthenticated', # view 부분에서 다른 허용사항을 설정 가능
     ],
 
     # Authentication을 위한 클래스들
