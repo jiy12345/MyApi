@@ -52,6 +52,9 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 ]
 
+# 이메일 인증 안되도록 설정
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 SITE_ID = 1
 
 REST_FRAMEWORK = {
