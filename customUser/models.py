@@ -11,5 +11,6 @@ class CarSpecs(models.Model):
     engine_type = models.CharField(max_length=50)
 
     # 출력될 데이터 결정하기!
+    # 구현되어있지 않으면 클래스이름 object (번호) 형식으로 출력된다!
     def __str__(self):
-        return self.car_brand
+        return self.car_model
