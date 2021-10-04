@@ -4,7 +4,7 @@ from django.db import models
 
 # 차 스펙 갖는 모델 작성해보기
 class CarSpecs(models.Model):
-    car_brand = models.Charfield(max_length=50)
+    car_brand = models.CharField(max_length=50)
     car_model = models.CharField(max_length=100)
     production_year = models.CharField(max_length=10)
     car_body = models.CharField(max_length=50)
